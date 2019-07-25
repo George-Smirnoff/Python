@@ -1,0 +1,48 @@
+def find_lengh(num):
+#    num = int(input("Enter a number: "))
+    
+    if (num % 2) == 0:
+      oven = num/2
+#      print(oven)
+      return find_lengh(oven)+1
+        #print(changed)
+      # подсчет длины последовательности и выход  
+      #  break
+    else:
+      if int(num) == 1:
+        #print(counter+1)
+        return 1
+      odd = num*3 + 1
+ #     print(odd)
+      return find_lengh(odd)+1
+      #print("{0} is Odd".format(num))
+
+
+#readed = int(n)
+for n in range(9,0,-2):
+  result = find_lengh(n)
+  print(result)
+
+"""
+
+
+
+
+
+highest = max(1, 2, 3)
+print(highest)
+
+def test():
+  return 12
+
+get = test()
+print(get)
+"""
+
+"""
+changed = float(2) 
+print(changed)
+if (-2.0).is_integer():
+  print(changed)
+
+"""
