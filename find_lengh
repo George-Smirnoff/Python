@@ -1,48 +1,35 @@
+x = 0
+max = 0
+my_list = []
+
+
 def find_lengh(num):
-#    num = int(input("Enter a number: "))
-    
     if (num % 2) == 0:
-      oven = num/2
-#      print(oven)
-      return find_lengh(oven)+1
-        #print(changed)
-      # подсчет длины последовательности и выход  
-      #  break
+        oven = num / 2
+        return find_lengh(oven) + 1
     else:
-      if int(num) == 1:
-        #print(counter+1)
-        return 1
-      odd = num*3 + 1
- #     print(odd)
-      return find_lengh(odd)+1
-      #print("{0} is Odd".format(num))
+        if int(num) == 1:
+            return 1
+        odd = num * 3 + 1
+        return find_lengh(odd) + 1
 
-
-#readed = int(n)
-for n in range(9,0,-2):
-  result = find_lengh(n)
-  print(result)
+for n in range(999, 0, -2):
+    result = find_lengh(n)
+    my_list.append(result)
 
 """
-
-
-
-
-
-highest = max(1, 2, 3)
-print(highest)
-
-def test():
-  return 12
-
-get = test()
-print(get)
-"""
+for x in range(len(my_list)):
+    show=my_list[x]
+    print(show)
+    x+=1
 
 """
-changed = float(2) 
-print(changed)
-if (-2.0).is_integer():
-  print(changed)
-
-"""
+while x < len(my_list):
+    if my_list[x] > max:
+        next_after_max = max
+        max = my_list[x]
+    if my_list[x] > next_after_max and my_list[x] < max:
+        next_after_max = my_list[x]
+    x += 1
+print(next_after_max)
+print(max)
